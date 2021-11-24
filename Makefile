@@ -1,7 +1,8 @@
 NAME 		= 	libft.a
 CC			= 	gcc
-H_DIR		=	.
-S_DIR		=	.
+H_DIR		=	includes/
+S_DIR		=	src/
+O_DIR		=	obj/
 SRCS		=	ft_atoi.c\
 				ft_isalpha.c\
 				ft_itoa.c\
