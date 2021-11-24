@@ -55,7 +55,7 @@ CFLAGS		=	-Wall -Werror -Wextra
 RM			=	rm -rf
 AR			=	ar rc
 
-%.o:	%.c
+%.o:	$(S_DIR)%.c
 		$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
 
 $(NAME):	$(OBJS)
