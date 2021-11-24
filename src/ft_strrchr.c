@@ -6,13 +6,13 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 18:04:27 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/24 10:32:10 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/24 11:40:09 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strrchr(const char *s, int c, size_t i, t_bool t)
+static char	*sub_strrchr(const char *s, int c, size_t i, t_bool t)
 {
 	char	*str;
 

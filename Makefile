@@ -1,8 +1,9 @@
 NAME 		= 	libft.a
 CC			= 	gcc
-H_DIR		=	includes/
-S_DIR		=	src/
-O_DIR		=	obj/
+DMK			=	mkdir
+H_DIR		=	includes
+S_DIR		=	src
+O_DIR		=	obj
 SRCS		=	ft_atoi.c\
 				ft_isalpha.c\
 				ft_itoa.c\
@@ -48,14 +49,14 @@ B_SRCS		=	ft_lstnew.c\
 				ft_lstiter.c\
 				ft_lstmap.c
 
-OBJS		=	$(SRCS:.c=.o)
-OBJBONUS	=	$(B_SRCS:.c=.o)
+OBJS		=	$(SRCS:%.c=$(O_DIR)/%.o)
+OBJBONUS	=	$(B_SRCS:.c=$(O_DIR).o)
 INCLUDES	=	-I$(H_DIR)
 CFLAGS		=	-Wall -Werror -Wextra
 RM			=	rm -rf
 AR			=	ar rc
 
-%.o:	$(S_DIR)%.c
+$(O_DIR)/%.o:	$(S_DIR)/%.c
 		$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
 
 $(NAME):	$(OBJS)
@@ -65,6 +66,7 @@ bonus:	$(NAME) $(OBJBONUS)
 		$(AR) $(NAME) $(OBJBONUS)
 
 all:	$(NAME)
+		
 
 clean:
 		$(RM) $(OBJS) $(OBJBONUS)
