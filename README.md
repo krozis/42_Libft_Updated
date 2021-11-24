@@ -65,6 +65,7 @@
 
 ## Whats next ?
 #### Listes chainees : 
+(void : http://sdz.tdct.org/sdz/les-listes-chainees-2.html)
 - lstsize
 - lstlast
 - lstadd_back
