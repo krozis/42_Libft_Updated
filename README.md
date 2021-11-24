@@ -61,3 +61,24 @@
 
 - ft_lstnew
 - ft_lstadd_front
+
+
+## Whats next ?
+#### Listes chainees : 
+- lstsize
+- lstlast
+- lstadd_back
+- lstdelone
+- lstclear
+- lstiteri
+- lstmap
+
+#### Convert
+- (int)hex to decimal
+- (int)decimal to hex
+- (int)octal to decimal
+- (int)decimal to octal
+- (int)bin to decimal
+- (int)decimal to bin
+- (char base + char nbr) to decimal
+- decimal to (char base + char nbr)
