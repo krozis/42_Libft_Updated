@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/24 11:09:29 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/24 17:41:31 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# define HEXADECIMAL "0123456789ABCDEF"
+# define DECIMAL "0123456789"
+# define OCTAL "01234567"
+# define BINARY "01"
 
 typedef enum e_bool
 {
@@ -37,6 +42,7 @@ t_bool			ft_isalpha(int c);
 t_bool			ft_isdigit(int c);
 t_bool			ft_isascii(int c);
 t_bool			ft_isprint(int c);
+t_bool			ft_isspace(int c);
 char			*ft_itoa(int n);
 void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memset(void *b, int c, size_t len);
