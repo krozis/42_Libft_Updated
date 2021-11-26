@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:33:55 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/24 11:08:13 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/26 18:32:56 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_bool	ft_isalnum(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (ft_isdigit(c))
 		return (TRUE);
-	else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	else if (ft_isalpha(c))
 		return (TRUE);
 	return (FALSE);
 }
