@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 14:16:09 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/26 14:20:43 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/26 14:22:45 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list	*strt;
+	t_list	*start;
 
 	new->next == NULL;
 	if (*alst == NULL)
