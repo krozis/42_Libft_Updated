@@ -31,6 +31,7 @@
 #### Convert:
 
 - ft_atoi
+- base_to_int_dec
 - ft_bin_to_int_dec
 - ft_itoa
 - ft_hex_to_int_dec
@@ -83,8 +84,6 @@
 #### Convert
 
 - (int)decimal to hex
-- (int)octal to decimal
 - (int)decimal to octal
 - (int)decimal to bin
-- (char base + char nbr) to decimal
 - decimal to (char base + char nbr)

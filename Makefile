@@ -5,6 +5,7 @@ H_DIR		=	includes
 S_DIR		=	src
 O_DIR		=	obj
 SRCS		=	ft_atoi.c\
+				ft_base_to_int_dec.c\
 				ft_bin_to_int_dec.c\
 				ft_bzero.c\
 				ft_calloc.c\
