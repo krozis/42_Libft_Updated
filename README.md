@@ -58,21 +58,18 @@
 - ft_toupper
 
 #### Listes chainees:
+(void : http://sdz.tdct.org/sdz/les-listes-chainees-2.html)
 
 - ft_lstnew
 - ft_lstadd_front
-
-
-## Whats next ?
-#### Listes chainees : 
-(void : http://sdz.tdct.org/sdz/les-listes-chainees-2.html)
-- lstsize
+- ft_lstsize
 - lstlast
+- lstadd_back
 - lstadd_back
 - lstdelone
 - lstclear
-- lstiteri
-- lstmap
+
+## Whats next ?
 
 #### Convert
 - (int)hex to decimal
