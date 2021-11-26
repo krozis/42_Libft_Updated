@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:53:31 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/24 11:09:17 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/26 16:25:36 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ t_bool	ft_isprint(int c)
 {
 	if (c > 31 && c < 127)
 		return (TRUE);
-	return (TRUE);
+	return (FALSE);
 }
