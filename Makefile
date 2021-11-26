@@ -5,12 +5,14 @@ H_DIR		=	includes
 S_DIR		=	src
 O_DIR		=	obj
 SRCS		=	ft_atoi.c\
+				ft_bin_to_int_dec.c\
 				ft_bzero.c\
 				ft_calloc.c\
 				ft_hex_to_int_dec.c\
 				ft_isalnum.c\
 				ft_isalpha.c\
 				ft_isascii.c\
+				ft_isbinary.c\
 				ft_ishexa.c\
 				ft_isdigit.c\
 				ft_isprint.c\

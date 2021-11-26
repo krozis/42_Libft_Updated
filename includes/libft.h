@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/26 17:10:47 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/26 17:34:50 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,12 @@ typedef struct s_list
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
+int				ft_bin_to_int_dec(char *bin);
 int				ft_hex_to_int_dec(char *hex);
 t_bool			ft_isalnum(int c);
 t_bool			ft_isalpha(int c);
 t_bool			ft_isascii(int c);
+t_bool			ft_isbinary(char *str);
 t_bool			ft_isdigit(int c);
 t_bool			ft_ishexa(char *nbr);
 t_bool			ft_isprint(int c);
