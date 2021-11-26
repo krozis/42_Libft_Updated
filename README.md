@@ -125,6 +125,7 @@ Contact lmartin@student.42.fr
 - ft_isbinary
 - ft_isdigit
 - ft_ishexa
+- ft_isoctal
 - ft_isprint
 - ft_isspace
 
@@ -144,9 +145,10 @@ Contact lmartin@student.42.fr
 #### Convert:
 
 - ft_atoi
-- ft_bin to int_dec
+- ft_bin_to_int_dec
 - ft_itoa
-- ft_hex to int_dec
+- ft_hex_to_int_dec
+- ft_oct_to_int_dec
 
 #### Display:
 

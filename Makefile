@@ -15,6 +15,7 @@ SRCS		=	ft_atoi.c\
 				ft_isbinary.c\
 				ft_ishexa.c\
 				ft_isdigit.c\
+				ft_isoctal.c\
 				ft_isprint.c\
 				ft_isspace.c\
 				ft_itoa.c\
@@ -23,6 +24,7 @@ SRCS		=	ft_atoi.c\
 				ft_memcpy.c\
 				ft_memmove.c\
 				ft_memset.c\
+				ft_oct_to_int_dec.c\
 				ft_power.c\
 				ft_putchar_fd.c\
 				ft_putendl_fd.c\

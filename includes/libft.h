@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/26 17:34:50 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/26 17:52:26 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ t_bool			ft_isascii(int c);
 t_bool			ft_isbinary(char *str);
 t_bool			ft_isdigit(int c);
 t_bool			ft_ishexa(char *nbr);
+t_bool			ft_isoctal(char *str);
 t_bool			ft_isprint(int c);
 t_bool			ft_isspace(int c);
 char			*ft_itoa(int n);
@@ -53,6 +54,7 @@ void			*ft_memset(void *b, int c, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t n);
+int				ft_oct_to_int_dec(char *bin);
 int				ft_power(int power, int nbr);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
