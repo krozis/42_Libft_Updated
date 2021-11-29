@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/26 18:08:45 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/29 13:19:51 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void			*ft_calloc(size_t nmemb, size_t size);
 int				ft_base_to_int_dec(char *base, char *bnbr);
 int				ft_bin_to_int_dec(char *bin);
 int				ft_hex_to_int_dec(char *hex);
+size_t			ft_intlen(int nb);
 t_bool			ft_isalnum(int c);
 t_bool			ft_isalpha(int c);
 t_bool			ft_isascii(int c);
