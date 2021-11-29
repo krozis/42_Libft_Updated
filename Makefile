@@ -22,7 +22,7 @@ SRCS		=	ft_atoi.c\
 				ft_isspace.c\
 				ft_itoa.c\
 				ft_min.c\
-				ft_max.c
+				ft_max.c\
 				ft_memchr.c\
 				ft_memcmp.c\
 				ft_memcpy.c\
