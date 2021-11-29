@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2021/11/29 13:19:51 by stelie           ###   ########.fr       */
+/*   Updated: 2021/11/29 15:00:26 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ t_bool			ft_isoctal(char *str);
 t_bool			ft_isprint(int c);
 t_bool			ft_isspace(int c);
 char			*ft_itoa(int n);
+int				ft_max(int a, int b);
+int				ft_min(int a, int b);
 void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memset(void *b, int c, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
