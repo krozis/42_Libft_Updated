@@ -14,6 +14,7 @@
 - ft_isoctal
 - ft_isprint
 - ft_isspace
+- ft_incharset
 
 #### Memory:
 

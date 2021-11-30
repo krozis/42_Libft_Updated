@@ -10,6 +10,7 @@ SRCS		=	ft_atoi.c\
 				ft_bzero.c\
 				ft_calloc.c\
 				ft_hex_to_int_dec.c\
+				ft_incharset.c\
 				ft_intlen.c\
 				ft_isalnum.c\
 				ft_isalpha.c\
