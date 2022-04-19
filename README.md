@@ -3,8 +3,9 @@
 
 ## List of the functions :
 
-#### check char type:
+#### 00 - is_something functions:
 
+- ft_incharset
 - ft_isalnum
 - ft_isalpha
 - ft_isascii
@@ -14,38 +15,39 @@
 - ft_isoctal
 - ft_isprint
 - ft_isspace
-- ft_incharset
+- ft_islower
+- ft_isupper
 
-#### Memory:
+#### 01 - get_len functions:
 
-- ft_bzero
-- ft_memchr
-- ft_memset
-- ft_memcpy
-- ft_memmove
-- ft_memcmp
+- ft_hexalen
+- ft_intlen
+- ft_nbrlen
+- ft_strlen
 
-#### Calcul:
-
-- ft_power
-
-#### Convert:
+#### 02 - numbers functions:
 
 - ft_atoi
-- base_to_int_dec
-- ft_bin_to_int_dec
+- ft_max
+- ft_min
+- ft_power
 - ft_itoa
-- ft_hex_to_int_dec
-- ft_oct_to_int_dec
 
-#### Display:
+#### 03 - bases functions:
+
+- ft_base_to_dec
+- ft_bin_to_dec
+- ft_oct_to_dec
+- ft_hex_to_dec
+
+#### 04 - put_something functions:
 
 - ft_putchar_fd
 - ft_putnbr_fd
 - ft_putendl_fd
 - ft_putstr_fd
 
-#### Strings:
+#### 05 - strings functions:
 
 - ft_split
 - ft_strchr
@@ -61,14 +63,20 @@
 - ft_strlcat
 - ft_strncmp
 - ft_substr
+- ft_ctolower
+- ft_ctoupper
 
-#### Others:
+#### 06 - memory functions:
 
+- ft_bzero
 - ft_calloc
-- ft_tolower
-- ft_toupper
+- ft_memchr
+- ft_memset
+- ft_memcpy
+- ft_memmove
+- ft_memcmp
 
-#### Listes chainees:
+#### 07 - chained_lists functions:
 (void : http://sdz.tdct.org/sdz/les-listes-chainees-2.html)
 
 - ft_lstnew
@@ -80,7 +88,16 @@
 - lstdelone
 - lstclear
 
+#### 08 - ft_printf function:
+
 ## Whats next ?
+
+#### 09 - get_next_line:
+- GNL
+
+#### 05 - strings:
+- ft_stolower
+- ft_stoupper
 
 #### Convert
 
@@ -88,3 +105,4 @@
 - (int)decimal to octal
 - (int)decimal to bin
 - decimal to (char base + char nbr)
+- convert_base
