@@ -6,7 +6,7 @@
 /*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 13:08:51 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 22:22:24 by krozis           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:35:22 by krozis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ size_t	ft_intlen(int nb)
 	}
 	return (len);
 }
-
 
 size_t	ft_nbrlen(long nb)
 {
