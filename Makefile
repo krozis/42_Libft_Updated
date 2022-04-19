@@ -1,82 +1,67 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: krozis <krozis@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/04/19 20:20:34 by krozis            #+#    #+#              #
+#    Updated: 2022/04/19 22:36:07 by krozis           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#Name
 NAME 		= 	libft.a
+
+#Commands
 CC			= 	gcc
-DMK			=	mkdir
+DMK			=	mkdir -p
+RM			=	rm -rf
+AR			=	ar rc
+
+#Compilation flags
+INCLUDES	=	-I$(H_DIR)
+CFLAGS		=	-Wall -Werror -Wextra
+
+#Directories
 H_DIR		=	includes
 S_DIR		=	src
 O_DIR		=	obj
-SRCS		=	ft_atoi.c\
-				ft_base_to_int_dec.c\
-				ft_bin_to_int_dec.c\
-				ft_bzero.c\
-				ft_calloc.c\
-				ft_hex_to_int_dec.c\
-				ft_incharset.c\
-				ft_intlen.c\
-				ft_isalnum.c\
-				ft_isalpha.c\
-				ft_isascii.c\
-				ft_isbinary.c\
-				ft_ishexa.c\
-				ft_isdigit.c\
-				ft_isoctal.c\
-				ft_isprint.c\
-				ft_isspace.c\
-				ft_itoa.c\
-				ft_min.c\
-				ft_max.c\
-				ft_memchr.c\
-				ft_memcmp.c\
-				ft_memcpy.c\
-				ft_memmove.c\
-				ft_memset.c\
-				ft_oct_to_int_dec.c\
-				ft_power.c\
-				ft_putchar_fd.c\
-				ft_putendl_fd.c\
-				ft_putnbr_fd.c\
-				ft_putstr_fd.c\
-				ft_split.c\
-				ft_strchr.c\
-				ft_strdup.c\
-				ft_striteri.c\
-				ft_strjoin.c\
-				ft_strlcat.c\
-				ft_strlcpy.c\
-				ft_strlen.c\
-				ft_strmapi.c\
-				ft_strncmp.c\
-				ft_strnstr.c\
-				ft_strrchr.c\
-				ft_strtrim.c\
-				ft_substr.c\
-				ft_tolower.c\
-				ft_toupper.c
 
-B_SRCS		=	ft_lstnew.c\
-				ft_lstadd_front.c\
-				ft_lstsize.c\
-				ft_lstlast.c\
-				ft_lstadd_back.c\
-				ft_lstdelone.c\
-				ft_lstclear.c\
-				ft_lstiter.c\
-				ft_lstmap.c
+#Source files
+SRCS		=	00_is_something/00_00.c\
+				00_is_something/00_01.c\
+				00_is_something/00_02.c\
+				01_get_len/01_00.c\
+				02_numbers/02_00.c\
+				02_numbers/02_01.c\
+				03_bases/03_00.c\
+				03_bases/03_01.c\
+				04_put_something/04_00.c\
+				05_strings/05_00.c\
+				05_strings/05_01.c\
+				05_strings/05_02.c\
+				05_strings/05_03.c\
+				05_strings/05_04.c\
+				06_memory/06_00.c\
+				06_memory/06_01.c\
+				07_chained_lists/07_00.c\
+				07_chained_lists/07_01.c\
+				08_ft_printf/08_00.c\
+				08_ft_printf/08_01.c\
+				08_ft_printf/08_02.c\
+				08_ft_printf/08_03.c\
+				08_ft_printf/08_04.c\
+				08_ft_printf/08_05.c\
+				08_ft_printf/08_06.c\
 
 OBJS		=	$(SRCS:%.c=$(O_DIR)/%.o)
-OBJBONUS	=	$(B_SRCS:%.c=$(O_DIR)/%.o)
-INCLUDES	=	-I$(H_DIR)
-CFLAGS		=	-Wall -Werror -Wextra
-RM			=	rm -rf
-AR			=	ar rc
 
 $(O_DIR)/%.o:	$(S_DIR)/%.c
 		$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
 
 $(NAME):	$(OBJS)
 			$(AR) $(NAME) $(OBJS)
-
-bonus:	$(NAME) $(OBJBONUS)
-		$(AR) $(NAME) $(OBJBONUS)
 
 all:	$(NAME)
 		
