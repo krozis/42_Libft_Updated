@@ -1,2 +1,3 @@
-# ignore freauently created main.c
+# ignore frequently created main.c
 main.c
+libft.a

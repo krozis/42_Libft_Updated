@@ -90,6 +90,8 @@
 
 #### 08 - ft_printf function:
 
+- ft_printf
+
 ## Whats next ?
 
 #### 09 - get_next_line:
