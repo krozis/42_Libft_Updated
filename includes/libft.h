@@ -6,7 +6,7 @@
 /*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 22:32:48 by krozis           ###   ########.fr       */
+/*   Updated: 2022/04/27 15:22:50 by krozis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdint.h>
 # include <stdarg.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 # define ERROR -1
 # define TYPESET "csiduxXp"
@@ -28,6 +29,10 @@
 # define DECIMAL "0123456789"
 # define OCTAL "01234567"
 # define BINARY "01"
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 
 typedef enum e_bool
 {
@@ -128,6 +133,8 @@ char			*ft_strrchr(const char *s, int c);
 char			*ft_strtrim(char const *s1, char const *set);
 int				ft_ctoupper(int c);
 int				ft_ctolower(int c);
+char			*ft_str_cut_before(char *src, char c);
+char			*ft_str_cut_after(char *src, char c);
 
 /*
 06_memory
@@ -165,5 +172,10 @@ int				pf_int(int nb, t_fid *fid);
 int				pf_uint(unsigned int nb, t_fid *fid);
 int				pf_hexa(unsigned int nb, t_fid *fid);
 int				pf_ptr(uintptr_t addr, t_fid *fid);
+
+/*
+09_gnl
+*/
+char			*get_next_line(int fd);
 
 #endif
