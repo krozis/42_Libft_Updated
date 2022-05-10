@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   05_01.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:22:01 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 20:31:07 by krozis           ###   ########.fr       */
+/*   Updated: 2022/05/10 13:38:16 by krozis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,16 @@ char	*ft_strchr(const char *s, int c)
 
 char	*ft_strdup(const char *s)
 {
-	size_t	i;
+	int		i;
+	int		len;
 	char	*dup;
 
-	i = ft_strlen(s);
-	dup = malloc(sizeof(char) * (i + 1));
+	i = 0;
+	len = ft_strlen(s);
+	dup = malloc(sizeof(char) * (len + 1));
 	if (dup == NULL)
 		return (NULL);
-	i = 0;
-	while (s[i])
+	while (i < len)
 	{
 		dup[i] = s[i];
 		i++;
