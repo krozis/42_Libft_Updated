@@ -6,7 +6,7 @@
 /*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:02:15 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/27 15:23:38 by krozis           ###   ########.fr       */
+/*   Updated: 2022/05/09 20:26:18 by krozis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,17 @@ char	*ft_str_cut_after(char *src, char c)
 	j = 0;
 	while (src[i] && src[i] != c)
 		i++;
-	dest = malloc(sizeof(char) * ((ft_strlen(src) - i) + 1));
+	if (src[0] == c)
+	{
+		dest = ft_strdup(src + 1);
+		return (dest);
+	}
+	else
+		dest = malloc(sizeof(char) * ((ft_strlen(src) - i) + 1));
 	if (dest == NULL)
 		return (NULL);
 	while (src[++i])
-	{
-		dest[j] = src[i];
-		j++;
-	}
+		dest[j++] = src[i];
+	dest[j] = '\0';
 	return (dest);
 }
