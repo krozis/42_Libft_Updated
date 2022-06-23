@@ -1,3 +1,4 @@
+
 # 42_Libft_Updated
 *My own version of Libft, after the official cursus project.*
 
@@ -5,18 +6,23 @@
 
 #### 00 - is_something functions:
 
-- ft_incharset
-- ft_isalnum
-- ft_isalpha
-- ft_isascii
-- ft_isbinary
-- ft_isdigit
-- ft_ishexa
-- ft_isoctal
-- ft_isprint
-- ft_isspace
-- ft_islower
-- ft_isupper
+| Function Name | Description | Prototype |
+|--|--|--|
+| ft_incharset | return TRUE if the character 'c' is in the charset given in argument. | `t_bool  ft_incharset(char  c, const  char *charset)`|
+| ft_isalnum | return TRUE if the character 'c' is alphanumerical | `t_bool  ft_isalnum(int  c)` |
+| ft_isalpha | return TRUE if 'c' is a letter | `t_bool  ft_isalpha(int  c)` |
+| ft_isascii | return TRUE if 'c' is an ascii character (0 to 128) | `t_bool  ft_isascii(int  c)`|
+| ft_isbinary | return TRUE if 'c' is '0' or '1' | `t_bool  ft_isbinary(char  *str)` |
+| ft_isdigit | return TRUE if 'c' is a number | `t_bool  ft_isdigit(int  c)` |
+| ft_ishexa | return TRUE if 'c' is an hexa character (0123456789abcdefABCDEF) | `t_bool  ft_ishexa(char  *nbr)` |
+| ft_isoctal | return TRUE if 'c' is an octal number (01234567) | `t_bool  ft_isoctal(char  *str)` |
+| ft_isprint | return TRUE if 'c' is a printable character | `t_bool  ft_isprint(int  c)` |
+| ft_isspace | return TRUE if 'c' is a space char (' ', '\t',...) | `t_bool  ft_isspace(int  c)` |
+| ft_islower |  return TRUE if 'c' is a lowercase letter| `t_bool  ft_islower(int  c)` |
+| ft_isupper | return TRUE if 'c' is an uppercase letter | `t_bool  ft_isupper(int  c)` |
+| ft_isnumber | return TRUE if the string "nb" is only composed of numbers (allowed one '-' or '+' at first char) | `t_bool  ft_isnumber(char  *nb)`|
+| ft_hasdouble | return TRUE if the int table tab[] contains at least two times the same int | `t_bool  ft_hasdouble(int  tab[], int  len)` |
+| ft_issorted | return TRUE if tab[] is sorted in ascending (increasing = TRUE) or descending (increasing = FALSE) order | `t_bool  ft_issorted(int  tab[], int  len, t_bool  increasing)`|
 
 #### 01 - get_len functions:
 
