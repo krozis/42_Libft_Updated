@@ -26,18 +26,23 @@
 
 #### 01 - get_len functions:
 
-- ft_hexalen
-- ft_intlen
-- ft_nbrlen
-- ft_strlen
+| Function Name | Description | Prototype |
+|--|--|--|
+| ft_hexalen | return the length of the hexadecimal number nb (size_t format)| `size_t  ft_hexalen(size_t  nb)` |
+| ft_intlen | return the length of the int nb | `size_t  ft_intlen(int  nb)` |
+| ft_nbrlen | return the length of the long int nb | `size_t  ft_nbrlen(long  nb)` |
+| ft_strlen | return the lenght of the string s | `size_t  ft_strlen(const  char  *s)` |
 
 #### 02 - numbers functions:
 
-- ft_atoi
-- ft_max
-- ft_min
-- ft_power
-- ft_itoa
+| Function Name | Description | Prototype |
+|--|--|--|
+| ft_atoi | return the given string str transformed to an int | int  ft_atoi(const  char  *str) |
+| ft_atol | return the given string str transformed to a long | long  ft_atol(const  char  *str) |
+| ft_max | return the max between ont a and b | `int  ft_max(int  a, int  b)` |
+| ft_min | return the min between ont a and b | `int  ft_min(int  a, int  b)` |
+| ft_power | return nbr ^ power  | `int  ft_power(int  power, int  nbr)` |
+| ft_itoa | return the given int in the string format | `char  *ft_itoa(int  n)` | 
 
 #### 03 - bases functions:
 
