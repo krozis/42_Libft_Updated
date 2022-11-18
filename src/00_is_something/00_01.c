@@ -6,12 +6,16 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:20:59 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/18 10:42:08 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/18 11:10:46 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * @brief Tells if a character is a number (0 to 9).
+ * @return returns true if c is a number, false if not.
+*/
 bool	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
@@ -19,6 +23,11 @@ bool	ft_isdigit(int c)
 	return (false);
 }
 
+/*
+ * @brief Tells if a character is an hexadecimal number (uppercase
+ * and lowercase).
+ * @return returns true if c is an hexa number, false if not.
+*/
 bool	ft_ishexa(char *nbr)
 {
 	while (*nbr)
@@ -30,6 +39,10 @@ bool	ft_ishexa(char *nbr)
 	return (true);
 }
 
+/*
+ * @brief Tells if a character is an octal number (0 to 7).
+ * @return returns true if c is an octal number, false if not.
+*/
 bool	ft_isoctal(char *str)
 {
 	while (*str)
@@ -41,6 +54,10 @@ bool	ft_isoctal(char *str)
 	return (true);
 }
 
+/*
+ * @brief Tells if a character is printable character.
+ * @return returns true if c is printable, false if not.
+*/
 bool	ft_isprint(int c)
 {
 	if (c > 31 && c < 127)
@@ -48,6 +65,10 @@ bool	ft_isprint(int c)
 	return (false);
 }
 
+/*
+ * @brief Tells if a character is space character (space, tab, etc..).
+ * @return returns true if c is a space character, false if not.
+*/
 bool	ft_isspace(int c)
 {
 	if ((c >= 9 && c <= 13) || c == ' ')
