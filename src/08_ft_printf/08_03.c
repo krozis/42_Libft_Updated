@@ -6,13 +6,13 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 21:39:25 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/18 10:54:55 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/18 13:26:07 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	pf_int_print(int nb, t_fid *fid, int nb_len)
+static void	_pf_int_print(int nb, t_fid *fid, int nb_len)
 {
 	if (nb < 0)
 		write(1, "-", 1);
@@ -29,13 +29,13 @@ static void	pf_int_print(int nb, t_fid *fid, int nb_len)
 		ft_pf_putnbr(nb);
 }
 
-static int	pf_int_default(int nb, t_fid *fid, int nb_len)
+static int	_pf_int_default(int nb, t_fid *fid, int nb_len)
 {
 	int	i;
 
 	i = 0;
 	if (fid->flag[MINUS])
-		pf_int_print(nb, fid, nb_len);
+		_pf_int_print(nb, fid, nb_len);
 	while (fid->flag[M_WIDTH] > nb_len + i
 		&& fid->flag[M_WIDTH] > fid->flag[PREC] + i)
 	{
@@ -45,11 +45,11 @@ static int	pf_int_default(int nb, t_fid *fid, int nb_len)
 			i += write(1, " ", 1);
 	}
 	if (fid->flag[MINUS] == 0)
-		pf_int_print(nb, fid, nb_len);
+		_pf_int_print(nb, fid, nb_len);
 	return (ft_max(nb_len, ft_max(fid->flag[M_WIDTH], fid->flag[PREC])));
 }
 
-static int	pf_int_sign_zero(int nb, t_fid *fid, int nb_len)
+static int	_pf_int_sign_zero(int nb, t_fid *fid, int nb_len)
 {
 	int	max;
 	int	i;
@@ -70,7 +70,7 @@ static int	pf_int_sign_zero(int nb, t_fid *fid, int nb_len)
 	return (max);
 }
 
-static int	pf_int_sign_simple(int nb, t_fid *fid, int nb_len)
+static int	_pf_int_sign_simple(int nb, t_fid *fid, int nb_len)
 {
 	int	i;
 	int	max;
@@ -78,7 +78,7 @@ static int	pf_int_sign_simple(int nb, t_fid *fid, int nb_len)
 	i = 1;
 	max = ft_max(nb_len, ft_max(fid->flag[M_WIDTH], fid->flag[PREC]));
 	if (fid->flag[MINUS])
-		pf_int_print(nb, fid, nb_len);
+		_pf_int_print(nb, fid, nb_len);
 	while (fid->flag[M_WIDTH] > nb_len + i
 		&& fid->flag[M_WIDTH] > fid->flag[PREC] + i)
 	{
@@ -88,7 +88,7 @@ static int	pf_int_sign_simple(int nb, t_fid *fid, int nb_len)
 			i += write(1, " ", 1);
 	}
 	if (fid->flag[MINUS] == 0)
-		pf_int_print(nb, fid, nb_len);
+		_pf_int_print(nb, fid, nb_len);
 	if (max == fid->flag[PREC] || max == nb_len)
 		return (max + 1);
 	return (max);
@@ -112,8 +112,8 @@ int	pf_int(int nb, t_fid *fid)
 	if (nb < 0 || fid->flag[SPAC] || fid->flag[PLUS])
 	{
 		if (fid->flag[ZERO])
-			return (pf_int_sign_zero(nb, fid, nb_len));
-		return (pf_int_sign_simple(nb, fid, nb_len));
+			return (_pf_int_sign_zero(nb, fid, nb_len));
+		return (_pf_int_sign_simple(nb, fid, nb_len));
 	}
-	return (pf_int_default(nb, fid, nb_len));
+	return (_pf_int_default(nb, fid, nb_len));
 }
