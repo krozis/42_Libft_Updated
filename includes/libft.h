@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/18 10:39:16 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:55:11 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ typedef enum e_flags
 	SHARP,
 	MINUS,
 	PLUS,
-	SPACE,
+	SPAC,
 	M_WIDTH,
 	PREC,
 	FID_ERROR
@@ -64,6 +64,7 @@ typedef struct s_fid
 /*
 00_is_something
 */
+
 bool			ft_incharset(char c, const char *charset);
 bool			ft_isalnum(int c);
 bool			ft_isalpha(int c);
@@ -80,6 +81,7 @@ bool			ft_isupper(int c);
 /*
 01_get_len
 */
+
 size_t			ft_hexalen(size_t nb);
 size_t			ft_intlen(int nb);
 size_t			ft_nbrlen(long nb);
@@ -88,6 +90,7 @@ size_t			ft_strlen(const char *s);
 /*
 02_numbers
 */
+
 int				ft_atoi(const char *str);
 int				ft_max(int a, int b);
 int				ft_min(int a, int b);
@@ -97,6 +100,7 @@ char			*ft_itoa(int n);
 /*
 03_bases
 */
+
 int				ft_base_to_int_dec(char *base, char *bnbr);
 int				ft_bin_to_int_dec(char *bin);
 int				ft_hex_to_int_dec(char *hex);
@@ -105,6 +109,7 @@ int				ft_oct_to_int_dec(char *bin);
 /*
 04_put_something
 */
+
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
@@ -113,6 +118,7 @@ void			ft_putstr_fd(char *s, int fd);
 /*
 05_strings
 */
+
 char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *s);
@@ -134,6 +140,7 @@ char			*ft_str_cut_after(char *src, char c);
 /*
 06_memory
 */
+
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
 void			*ft_memchr(const void *s, int c, size_t n);
@@ -145,6 +152,7 @@ void			*ft_memmove(void *dst, const void *src, size_t n);
 /*
 07_chained_lists
 */
+
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **alst, t_list *new);
 int				ft_lstsize(t_list *lst);
@@ -159,6 +167,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 /*
 08_ft_printf
 */
+
 int				ft_printf(const char *format, ...);
 void			ft_pf_putnbr(int n);
 int				use_fid(va_list list, t_fid *fid);
@@ -171,6 +180,7 @@ int				pf_ptr(uintptr_t addr, t_fid *fid);
 /*
 09_gnl
 */
+
 char			*get_next_line(int fd);
 
 #endif

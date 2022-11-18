@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 19:34:41 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/18 10:45:20 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:54:55 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ static void	check_if_valid_fid(t_fid *fid)
 	if (fid->flag[SHARP] && !(fid->conv == 'x' || fid->conv == 'X'))
 		fid->flag[FID_ERROR] = 1;
 	if (fid->flag[PLUS] && (!(fid->conv == 'i' || fid->conv == 'd')
-			|| fid->flag[SPACE] == 1))
+			|| fid->flag[SPAC] == 1))
 		fid->flag[FID_ERROR] = 1;
-	if (fid->flag[SPACE] && !(fid->conv == 'i' || fid->conv == 'd'))
+	if (fid->flag[SPAC] && !(fid->conv == 'i' || fid->conv == 'd'))
 		fid->flag[FID_ERROR] = 1;
 	if (fid->flag[PREC] > 0 && (fid->conv == 'c' || fid->conv == 'p'))
 		fid->flag[FID_ERROR] = 1;
@@ -42,11 +42,11 @@ static void	check_if_valid_flag(char c, t_fid *fid)
 		fid->flag[MINUS] = 1;
 	else if (c == '+' && fid->flag[PLUS] == 0)
 		fid->flag[PLUS] = 1;
-	else if (c == ' ' && fid->flag[SPACE] == 0)
-		fid->flag[SPACE] = 1;
+	else if (c == ' ' && fid->flag[SPAC] == 0)
+		fid->flag[SPAC] = 1;
 	else
 		fid->flag[FID_ERROR] = 1;
-	if (fid->flag[PLUS] && fid->flag[SPACE])
+	if (fid->flag[PLUS] && fid->flag[SPAC])
 		fid->flag[FID_ERROR] = 1;
 	if (fid->flag[MINUS] && fid->flag[ZERO])
 		fid->flag[FID_ERROR] = 1;

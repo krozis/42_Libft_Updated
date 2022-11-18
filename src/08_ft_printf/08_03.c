@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 21:39:25 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/18 10:45:59 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:54:55 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	pf_int_print(int nb, t_fid *fid, int nb_len)
 		write(1, "-", 1);
 	else if (fid->flag[PLUS])
 		write(1, "+", 1);
-	else if (fid->flag[SPACE])
+	else if (fid->flag[SPAC])
 		write(1, " ", 1);
 	while (fid->flag[PREC] > nb_len)
 	{
@@ -60,7 +60,7 @@ static int	pf_int_sign_zero(int nb, t_fid *fid, int nb_len)
 		write(1, "-", 1);
 	else if (fid->flag[PLUS])
 		write(1, "+", 1);
-	else if (fid->flag[SPACE])
+	else if (fid->flag[SPAC])
 		write(1, " ", 1);
 	while (fid->flag[M_WIDTH] > nb_len + i++)
 		write(1, "0", 1);
@@ -105,11 +105,11 @@ int	pf_int(int nb, t_fid *fid)
 	{
 		if (fid->flag[PLUS])
 			return (write(1, "+0", 2));
-		else if (fid->flag[SPACE])
+		else if (fid->flag[SPAC])
 			return (write(1, " 0", 2));
 		return (write(1, "0", 1));
 	}
-	if (nb < 0 || fid->flag[SPACE] || fid->flag[PLUS])
+	if (nb < 0 || fid->flag[SPAC] || fid->flag[PLUS])
 	{
 		if (fid->flag[ZERO])
 			return (pf_int_sign_zero(nb, fid, nb_len));
