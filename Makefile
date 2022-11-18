@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: stelie <stelie@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/19 20:20:34 by krozis            #+#    #+#              #
-#    Updated: 2022/11/18 10:17:27 by stelie           ###   ########.fr        #
+#    Created: 2022/04/19 20:20:34 by stelie            #+#    #+#              #
+#    Updated: 2022/11/18 10:32:42 by stelie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,16 +38,6 @@ RFLAGS		=	-lreadline
 H_DIR		=	includes
 S_DIR		=	src
 O_DIR		=	obj
-D0			=	00_is_something
-D1			=	01_get_len
-D2			=	02_numbers
-D3			=	03_bases
-D4			=	04_put_something
-D5			=	05_strings
-D6			=	06_memory
-D7			=	07_chained_lists
-D8			=	08_ft_printf
-D9			=	09_gnl
 
 #Source files
 SRC_ISS		=	00_00.c\
@@ -101,12 +91,12 @@ OBJ_GNL		=	$(addprefix $(O_DIR)/, $(SRC_GNL:.c=.o))
 $(O_DIR)/%.o:	./$(S_DIR)/*/%.c
 				@echo $(Y)Compiling [$@]...$(X)
 				@mkdir -p $(O_DIR)
-				@$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
+				$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
 				@printf $(UP) $(CUT)
 
 $(NAME):	$(OBJ_ISS) $(OBJ_LEN) $(OBJ_NBR) $(OBJ_BAS) $(OBJ_PUT) $(OBJ_STR) $(OBJ_MEM) $(OBJ_LST) $(OBJ_PTF) $(OBJ_GNL)
 			@echo $(Y)Compiling [$(NAME)]...$(X)
-			@$(AR) $(NAME) $(OBJS)
+			$(AR) $(NAME) $(OBJ_ISS) $(OBJ_LEN) $(OBJ_NBR) $(OBJ_BAS) $(OBJ_PUT) $(OBJ_STR) $(OBJ_MEM) $(OBJ_LST) $(OBJ_PTF) $(OBJ_GNL)
 			@printf $(UP)$(CUT)
 			@echo $(G)Finished [$(NAME)]$(X)
 			
