@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   08_05.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 21:39:38 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 22:35:12 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:46:37 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_pf_puthexa(unsigned int nb, t_bool low)
+static void	ft_pf_puthexa(unsigned int nb, bool low)
 {
 	if (nb < 16)
 	{
@@ -28,7 +28,7 @@ static void	ft_pf_puthexa(unsigned int nb, t_bool low)
 	}
 }
 
-static void	pf_hexa_print(unsigned int nb, t_fid *fid, int nb_len, t_bool low)
+static void	pf_hexa_print(unsigned int nb, t_fid *fid, int nb_len, bool low)
 {
 	int	i;
 
@@ -49,7 +49,7 @@ static void	pf_hexa_print(unsigned int nb, t_fid *fid, int nb_len, t_bool low)
 		ft_pf_puthexa(nb, low);
 }
 
-static int	pf_hexa_default(unsigned int nb, t_fid *fid, int nb_len, t_bool low)
+static int	pf_hexa_default(unsigned int nb, t_fid *fid, int nb_len, bool low)
 {
 	int	len;
 	int	i;
@@ -75,12 +75,12 @@ static int	pf_hexa_default(unsigned int nb, t_fid *fid, int nb_len, t_bool low)
 int	pf_hexa(unsigned int nb, t_fid *fid)
 {
 	int		nb_len;
-	t_bool	low;
+	bool	low;
 
 	if (fid->conv == 'X')
-		low = FALSE;
+		low = false;
 	else
-		low = TRUE;
+		low = true;
 	nb_len = ft_hexalen(nb);
 	if (fid->def_pre && fid->flag[PREC] == 0 && nb == 0)
 		nb_len = 0;

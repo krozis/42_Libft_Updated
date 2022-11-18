@@ -3,56 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   00_00.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:18:34 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 20:45:22 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:42:44 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_incharset(char c, const char *charset)
+bool	ft_incharset(char c, const char *charset)
 {
 	while (*charset)
 	{
 		if (*charset == c)
-			return (TRUE);
+			return (true);
 		charset++;
 	}
-	return (FALSE);
+	return (false);
 }
 
-t_bool	ft_isalnum(int c)
+bool	ft_isalnum(int c)
 {
 	if (ft_isdigit(c))
-		return (TRUE);
+		return (true);
 	else if (ft_isalpha(c))
-		return (TRUE);
-	return (FALSE);
+		return (true);
+	return (false);
 }
 
-t_bool	ft_isalpha(int c)
+bool	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (TRUE);
-	return (FALSE);
+		return (true);
+	return (false);
 }
 
-t_bool	ft_isascii(int c)
+bool	ft_isascii(int c)
 {
 	if (c >= 0 && c < 128)
-		return (TRUE);
-	return (FALSE);
+		return (true);
+	return (false);
 }
 
-t_bool	ft_isbinary(char *str)
+bool	ft_isbinary(char *str)
 {
 	while (*str)
 	{
 		if (!(*str == '0' || *str == '1'))
-			return (FALSE);
+			return (false);
 		str++;
 	}
-	return (TRUE);
+	return (true);
 }

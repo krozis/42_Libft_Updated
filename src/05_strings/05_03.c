@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   05_03.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 11:06:51 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 20:45:46 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:44:43 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (fill_trim(s1, set, i));
 }
 
-static char	*sub_strrchr(const char *s, int c, size_t i, t_bool t)
+static char	*sub_strrchr(const char *s, int c, size_t i, bool t)
 {
 	char	*str;
 
@@ -91,7 +91,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (c == 0 && s[0])
 		return (&((char *)s)[ft_strlen(s)]);
 	if (c == 0)
-		return (sub_strrchr(s, c, ft_strlen(s), FALSE));
+		return (sub_strrchr(s, c, ft_strlen(s), false));
 	else
-		return (sub_strrchr(s, c, 0, TRUE));
+		return (sub_strrchr(s, c, 0, true));
 }

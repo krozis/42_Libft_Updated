@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   08_02.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:22:09 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 22:35:03 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:45:50 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ int	pf_string(char *str, t_fid *fid)
 		str = "(null)";
 	if (!str)
 		return (pf_str_null(fid->flag[M_WIDTH]));
-	if (fid->def_pre == FALSE || (fid->flag[PREC] >= (int)ft_strlen(str)))
+	if (fid->def_pre == false || (fid->flag[PREC] >= (int)ft_strlen(str)))
 		return (pf_str_no_prec(str, fid, ft_strlen(str)));
 	return (pf_str_with_prec(str, fid));
 }

@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   00_02.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 20:15:21 by krozis            #+#    #+#             */
-/*   Updated: 2022/04/19 20:19:36 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:41:37 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_islower(int c)
+bool	ft_islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (TRUE);
-	return (FALSE);
+		return (true);
+	return (false);
 }
 
-t_bool	ft_isupper(int c)
+bool	ft_isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (TRUE);
-	return (FALSE);
+		return (true);
+	return (false);
 }

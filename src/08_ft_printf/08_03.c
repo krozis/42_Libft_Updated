@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   08_03.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 21:39:25 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 22:35:07 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:45:59 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int	pf_int(int nb, t_fid *fid)
 	nb_len = ft_nbrlen(nb);
 	if (fid->def_pre && fid->flag[PREC] == 0)
 		nb_len = 0;
-	if (nb == 0 && fid->def_pre == FALSE && fid->flag[M_WIDTH] < 2)
+	if (nb == 0 && fid->def_pre == false && fid->flag[M_WIDTH] < 2)
 	{
 		if (fid->flag[PLUS])
 			return (write(1, "+0", 2));

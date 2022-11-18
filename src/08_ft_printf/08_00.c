@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   08_00.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 19:34:41 by stelie            #+#    #+#             */
-/*   Updated: 2022/04/19 22:34:49 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:45:20 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static void	get_fid(const char *format, t_fid *fid)
 	}
 	if (*format == '.')
 	{
-		fid->def_pre = TRUE;
+		fid->def_pre = true;
 		format++;
 		fid->fid_len++;
 		fid->flag[PREC] = ft_atoi(format);

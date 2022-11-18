@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/05/09 18:20:08 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 10:39:16 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <fcntl.h>
+# include <stdbool.h>
 
 # define ERROR -1
 # define TYPESET "csiduxXp"
@@ -33,12 +34,6 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5
 # endif
-
-typedef enum e_bool
-{
-	FALSE,
-	TRUE
-}				t_bool;
 
 typedef struct s_list
 {
@@ -63,24 +58,24 @@ typedef struct s_fid
 	int		flag[8];
 	char	conv;
 	int		fid_len;
-	t_bool	def_pre;
+	bool	def_pre;
 }				t_fid;
 
 /*
 00_is_something
 */
-t_bool			ft_incharset(char c, const char *charset);
-t_bool			ft_isalnum(int c);
-t_bool			ft_isalpha(int c);
-t_bool			ft_isascii(int c);
-t_bool			ft_isbinary(char *str);
-t_bool			ft_isdigit(int c);
-t_bool			ft_ishexa(char *nbr);
-t_bool			ft_islower(int c);
-t_bool			ft_isoctal(char *str);
-t_bool			ft_isprint(int c);
-t_bool			ft_isspace(int c);
-t_bool			ft_isupper(int c);
+bool			ft_incharset(char c, const char *charset);
+bool			ft_isalnum(int c);
+bool			ft_isalpha(int c);
+bool			ft_isascii(int c);
+bool			ft_isbinary(char *str);
+bool			ft_isdigit(int c);
+bool			ft_ishexa(char *nbr);
+bool			ft_islower(int c);
+bool			ft_isoctal(char *str);
+bool			ft_isprint(int c);
+bool			ft_isspace(int c);
+bool			ft_isupper(int c);
 
 /*
 01_get_len
