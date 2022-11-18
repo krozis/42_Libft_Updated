@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   05_01.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:22:01 by stelie            #+#    #+#             */
-/*   Updated: 2022/05/10 13:38:16 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/18 12:17:03 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * @brief Find the first occurence of the given character int the given string
+ * @param s: the string where we search
+ * @param c: the character to find
+ * @return Returns a pointer to the first occurence of the character
+ * c in the string s.
+*/
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
@@ -30,6 +37,12 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
+/*
+ * @brief Duplicate a given string
+ * @param s: the string to duplicate
+ * @return Returns a pointer to the new string, which is a
+ * duplicate of the string s
+*/
 char	*ft_strdup(const char *s)
 {
 	int		i;
@@ -50,6 +63,12 @@ char	*ft_strdup(const char *s)
 	return (dup);
 }
 
+/*
+ * @brief Applies the given function to each character of the given string
+ * @param s: the string to iterate
+ * @param (*f): the function to apply to each character of the string s
+ * and its index
+*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
@@ -62,6 +81,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
+/*
+ * @brief Creates a new string which is the joining of two given strings.
+ * @return Returns a pointer to the new string.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;
@@ -87,6 +110,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (join);
 }
 
+/*
+ * @brief Concatenate a given maximum characters of two given strings into one,
+ * with the guarantee of a NUL-terminating result.
+ * @return Returns the total size of the string it tried to create.
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
