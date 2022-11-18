@@ -6,11 +6,19 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 17:22:01 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/18 12:17:03 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/18 12:31:14 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * FT_STRCHR
+ * FT_STRDUP
+ * FT_STRITERI
+ * FT_STRJOIN
+ * FT_STRLCAT
+*/
 
 /*
  * @brief Find the first occurence of the given character int the given string
