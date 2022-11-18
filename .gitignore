@@ -1,3 +1,5 @@
 # ignore frequently created main.c
 main.c
 libft.a
+*.o
+obj/
