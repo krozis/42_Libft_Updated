@@ -6,7 +6,7 @@
 #    By: stelie <stelie@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/19 20:20:34 by stelie            #+#    #+#              #
-#    Updated: 2022/11/18 10:32:42 by stelie           ###   ########.fr        #
+#    Updated: 2022/11/18 10:35:07 by stelie           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,12 +91,12 @@ OBJ_GNL		=	$(addprefix $(O_DIR)/, $(SRC_GNL:.c=.o))
 $(O_DIR)/%.o:	./$(S_DIR)/*/%.c
 				@echo $(Y)Compiling [$@]...$(X)
 				@mkdir -p $(O_DIR)
-				$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
+				@$(CC) $(CFLAGS) $(INCLUDES) -o $@ -c $<
 				@printf $(UP) $(CUT)
 
 $(NAME):	$(OBJ_ISS) $(OBJ_LEN) $(OBJ_NBR) $(OBJ_BAS) $(OBJ_PUT) $(OBJ_STR) $(OBJ_MEM) $(OBJ_LST) $(OBJ_PTF) $(OBJ_GNL)
 			@echo $(Y)Compiling [$(NAME)]...$(X)
-			$(AR) $(NAME) $(OBJ_ISS) $(OBJ_LEN) $(OBJ_NBR) $(OBJ_BAS) $(OBJ_PUT) $(OBJ_STR) $(OBJ_MEM) $(OBJ_LST) $(OBJ_PTF) $(OBJ_GNL)
+			@$(AR) $(NAME) $(OBJ_ISS) $(OBJ_LEN) $(OBJ_NBR) $(OBJ_BAS) $(OBJ_PUT) $(OBJ_STR) $(OBJ_MEM) $(OBJ_LST) $(OBJ_PTF) $(OBJ_GNL)
 			@printf $(UP)$(CUT)
 			@echo $(G)Finished [$(NAME)]$(X)
 			
