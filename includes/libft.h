@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/18 11:52:58 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/21 10:41:13 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,7 @@ int				ft_putmsg_fd(char *msg, int fd, int ret);
 
 char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
+int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strdup(const char *s);
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strjoin(char const *s1, char const *s2);
@@ -137,6 +138,8 @@ int				ft_ctoupper(int c);
 int				ft_ctolower(int c);
 char			*ft_str_cut_before(char *src, char c);
 char			*ft_str_cut_after(char *src, char c);
+size_t			ft_str_arr_len(char **arr);
+char			**ft_str_arr_dup(char **arr);
 
 /*
 06_memory
