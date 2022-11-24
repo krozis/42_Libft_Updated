@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:13:51 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/22 13:45:12 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/24 10:52:51 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
  * frees it and set it to NULL.
  * @return Returns a pointer to the allocated memory.
 */
-
 void	ft_free(void *p)
 {
 	if (p)
