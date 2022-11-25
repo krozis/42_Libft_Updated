@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/25 11:36:32 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/25 12:25:53 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ size_t			ft_hexalen(size_t nb);
 size_t			ft_intlen(int nb);
 size_t			ft_nbrlen(long nb);
 size_t			ft_strlen(const char *s);
-size_t			ft_arrlen(const char **array);
+size_t			ft_arrlen(char **array);
 
 /*
 02_numbers
@@ -160,9 +160,6 @@ void			*ft_memset(void *b, int c, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t n);
-char			*ft_create_str(size_t size);
-char			**ft_create_arr(size_t size);
-char			**ft_arr_add_front(char	**array, char *str);
 
 /*
 07_chained_lists
