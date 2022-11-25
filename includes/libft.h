@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/24 11:40:28 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/25 11:36:32 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ size_t			ft_hexalen(size_t nb);
 size_t			ft_intlen(int nb);
 size_t			ft_nbrlen(long nb);
 size_t			ft_strlen(const char *s);
+size_t			ft_arrlen(const char **array);
 
 /*
 02_numbers
@@ -115,6 +116,7 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
 int				ft_putmsg_fd(char *msg, int fd, int ret);
+void			ft_putarr_fd(char **array, int fd);
 
 /*
 05_strings
@@ -140,6 +142,7 @@ char			*ft_str_cut_before(char *src, char c);
 char			*ft_str_cut_after(char *src, char c);
 size_t			ft_str_arr_len(char **arr);
 char			**ft_str_arr_dup(char **arr);
+char			**ft_str_arr_ndup(char **array, int n);
 void			ft_str_arr_free(char **array);
 char			*ft_str_rm_char(char *src, int index);
 char			*ft_str_rm_fst_occ(char *src, char c);
@@ -157,6 +160,9 @@ void			*ft_memset(void *b, int c, size_t len);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t n);
+char			*ft_create_str(size_t size);
+char			**ft_create_arr(size_t size);
+char			**ft_arr_add_front(char	**array, char *str);
 
 /*
 07_chained_lists
