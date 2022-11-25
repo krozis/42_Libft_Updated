@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 10:36:30 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/25 11:36:53 by stelie           ###   ########.fr       */
+/*   Updated: 2022/11/25 12:22:28 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /*
  * FT_STR_ARR_LEN
  * FT_STR_ARR_DUP
+ * FT_STR_ARR_NDUP
  * FT_STR_ARR_FREE
 */
 
