@@ -4,3 +4,6 @@ libft.a
 *.o
 obj/
 a.out
+test.c
+test
+EXEC
