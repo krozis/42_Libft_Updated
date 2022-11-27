@@ -6,7 +6,7 @@
 /*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/27 19:53:24 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/27 20:30:17 by krozis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ bool			ft_isupper(int c);
 
 size_t			ft_hexalen(size_t nb);
 size_t			ft_intlen(int nb);
-size_t			ft_nbrlen(long nb);
+size_t			ft_nbrlen(long long nb);
 size_t			ft_strlen(const char *s);
 size_t			ft_arrlen(char **array);
 
@@ -97,6 +97,7 @@ int				ft_max(int a, int b);
 int				ft_min(int a, int b);
 int				ft_power(int power, int nbr);
 char			*ft_itoa(int n);
+char			*ft_lltoa(long long int nb);
 
 /*
 03_bases
