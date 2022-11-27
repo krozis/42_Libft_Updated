@@ -6,7 +6,7 @@
 /*   By: krozis <krozis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:45:08 by stelie            #+#    #+#             */
-/*   Updated: 2022/11/27 19:20:49 by krozis           ###   ########.fr       */
+/*   Updated: 2022/11/27 19:53:24 by krozis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *s1, const char *s2, size_t len);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strrchr(const char *s, int c);
+char			*ft_strrev(char	*str);
 char			*ft_strtrim(char const *s1, char const *set);
 int				ft_ctoupper(int c);
 int				ft_ctolower(int c);
