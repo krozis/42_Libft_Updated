@@ -6,7 +6,7 @@
 /*   By: stelie <stelie@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 15:02:15 by stelie            #+#    #+#             */
-/*   Updated: 2022/12/02 14:23:49 by stelie           ###   ########.fr       */
+/*   Updated: 2022/12/02 14:39:46 by stelie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,16 +68,25 @@ char	*ft_str_cut_before(char *src, char c)
 	return (dest);
 }
 
+/*
+ * @brief Gives a string which is the string 
+ * after the given character was encountered in the given string.
+ * @param src: the original string
+ * @param c: the 'separator' character
+ * @return Returns a pointer to the newly created sting.
+*/
 char	*ft_str_cut_after(char *src, char c)
 {
 	char	*dest;
-	int		i;
+	size_t	i;
 	int		j;
 
 	i = 0;
 	j = 0;
 	while (src[i] && src[i] != c)
 		i++;
+	if (i == ft_strlen(src))
+		return (ft_strdup(src));
 	if (src[0] == c)
 	{
 		dest = ft_strdup(src + 1);
